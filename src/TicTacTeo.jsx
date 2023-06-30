@@ -154,8 +154,7 @@ const TicTacToe = () => {
               <span>{win}</span>
             </p>
             <button className="resetBtn" onClick={reset}>
-              {" "}
-              Reset{" "}
+              Reset
             </button>
           </div>
         </div>
