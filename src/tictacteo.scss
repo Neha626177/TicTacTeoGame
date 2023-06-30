@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headingCon {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.heading {
+  font-size: 1.3rem;
+  font-weight: 650;
+  color: rgba(29, 29, 134, 0.819);
+}
+.container {
+  width: 400px;
+  height: auto;
+  background-color: rgba(31, 172, 207, 0.77);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border-radius: 7px;
+
+  align-items: center;
+}
+.innerContainer {
+  // width:auto;
+  text-align: center;
+}
+.board {
+  width: 50px;
+  height: 50px;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 2px;
+  background-color: #0c2d48;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.board:hover {
+  background-color: rgb(255, 255, 0);
+}
+.gameContainer {
+  width: 100%;
+
+  max-height: 180px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.resetBtn {
+  margin-bottom: 1.4rem;
+  margin-top: 0.5rem;
+  padding: 2px 8px;
+}
+.box {
+  display: flex;
+}
+.scoreBoard {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  //  border: #969da2 solid 1px;
+  margin-bottom: 15px;
+}
+
+.showTurn{
+  font-size: 20px;
+  font-weight: 500;
+  background-color: yellow;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 2px 12px;
+  border-radius: 4px;
+}
+.showWin{
+  font-size: 20px;
+  font-weight: 500;
+  background-color: greenyellow;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  box-shadow: rgba(14, 224, 14, 0.25) 0px 2px 5px -1px,
+  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 4.75px 12px;
+  border-radius: 4px;
+}
+
+
+.resetBtn{
+  align-items: center;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+  rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  background-color: red;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  height: 38px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 22px;
+  padding-right: 22px;
+  position: relative;
+  top: 7px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 19px;
+}
+
+.resetBtn:focus {
+  box-shadow: #0c2d48 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, red 0 -3px 0 inset;
+}
+
+.resetBtn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #0c2d48 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.resetBtn:active {
+  box-shadow: #0c2d48 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.showTurn span {
+  color: red;
+  font-size: 25px;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+@media (max-width:480px) {
+  .container{
+    width: fit-content;
+    padding:0 30px;
+  }
+  .scoreBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.showWin {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 2px 15px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+.showTurn {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: yellow;
+  background-color: white;
+  padding: 2px 16px;
+  border-radius: 4px;
+}
+
+  
+}
